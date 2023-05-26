@@ -18,20 +18,20 @@ const NavBar = (props) => {
       <div className="flex items-center">
         <div className="flex items-center">
           <div className="text-20 mr-2 font-bold">NerdCard</div>
-          {isDarkMode ? (
+          {isDarkMode > (
             <BsSunFill
               className="cursor-pointer"
               size={"24px"}
               color={"#e9c46a"}
               onClick={() => toggleDarkMode(!isDarkMode)}
             />
-          ) : (
+          ):(
             <FaMoon
-              className="cursor-pointer"
-              size={"24px"}
-              color={"#e9c46a"}
-              onClick={() => toggleDarkMode(!isDarkMode)}
-            />
+            className="cursor-pointer"
+            size={"24px"}
+            color={"#e9c46a"}
+            onClick={() => toggleDarkMode(!isDarkMode)}
+          />
           )}
         </div>
         <ul className="md:flex md:gap-8 ml-auto text-16 font-semibold ">

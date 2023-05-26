@@ -10,7 +10,7 @@ function App() {
     height: undefined,
   });
 
-  const [isMobile, setMobile] = useState(false);
+  const [mobileSize, setMobileSize] = useState(false);
 
   useEffect(() => {
     const handleSize = () => {
@@ -22,18 +22,11 @@ function App() {
     window.addEventListener("resize", handleSize);
     handleSize();
     return () => window.removeEventListener("resize", handleSize);
-  }, []);
+  });
 
-  useEffect(() => {
-    if (windowSize.width < 500) {
-      setMobile(true);
-    } else {
-      setMobile(false);
-    }
-  }, [windowSize]);
   return (
-    <div className="font-sora overflow-y-auto overflow-x-hidden h-screen px-4 py-8 bg-gradient-to-b dark:from-purple-900 dark:to-purple-700 from-light-mode to-purple-700 dark:text-white text-black md:px-20">
-      <NavBar isMobile={isMobile} />
+    <div className="font-sora overflow-y-auto overflow-x-hidden h-screen px-4 py-8 bg-gradient-to-b from-purple-900 to-purple-700 text-white">
+      <NavBar />
       <Slogan />
       <Content />
     </div>

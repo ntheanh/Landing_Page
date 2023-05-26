@@ -15,7 +15,6 @@ module.exports = {
         "purple-700": "#5D0096",
         "purple-900": "#210035",
         "pink-500": "#AD26FF",
-        "light-mode": "#94a3b8",
       },
       fontSize: {
         13: "13px",
